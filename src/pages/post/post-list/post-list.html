@@ -1,0 +1,17 @@
+<ion-card *ngFor="let item of posts">
+    <ion-item>
+        <ion-avatar item-start>
+            <img src="assets/imgs/user.jpg">
+        </ion-avatar>
+        <h2>{{ item.Titulo }}</h2>
+        <p>{{ item.Autor?.Nome }}</p>
+        <ion-icon item-end small name="md-create" color="primary" (click)="editPost(item)"></ion-icon>
+
+    </ion-item>
+
+    <img src="assets/background/bg_2.png">
+
+    <ion-card-content>
+        <p>{{ item.Descricao }}</p>
+    </ion-card-content>
+</ion-card>

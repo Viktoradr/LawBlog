@@ -1,0 +1,34 @@
+<ion-content>
+
+    <form (ngSubmit)="logar(form)" #form="ngForm" [formGroup]="formulario">
+
+        <ion-grid>
+            <ion-row>
+                <ion-col col-6 push-3>
+                    <h2 ion-text text-center padding>LawBlog</h2>
+                </ion-col>
+            </ion-row>
+
+            <ion-row>
+                <ion-col col-10 push-1>
+                    <ion-item>
+                        <ion-label>Email</ion-label>
+                        <ion-input type="email" formControlName="email" required></ion-input>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-label>Senha</ion-label>
+                        <ion-input type="password" formControlName="senha" required></ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+
+            <ion-row padding-top>
+                <ion-col col-6 push-3>
+                    <button ion-button full>Entrar</button>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+
+    </form>
+</ion-content>

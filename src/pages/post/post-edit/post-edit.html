@@ -1,0 +1,40 @@
+<ion-header>
+
+    <ion-navbar color="primary">
+        <ion-title>Adicionar Texto</ion-title>
+        <ion-buttons end>
+            <button ion-button (click)="closeModal()">
+                <ion-icon name="md-close"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <form (ngSubmit)="onSubmit(form)" #form="ngForm" [formGroup]="formulario">
+
+        <ion-list>
+            <ion-item>
+                <ion-label floating>Título</ion-label>
+                <ion-input type="text" formControlName="Titulo" [(ngModel)]="post.Titulo" required></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>Autor</ion-label>
+                <ion-select formControlName="Autor" [(ngModel)]="post.Autor.id" required>
+                    <ion-option [value]="item.id" *ngFor="let item of autores">{{ item.Nome }}</ion-option>
+                </ion-select>
+            </ion-item>
+
+            <ion-item>
+                <ion-textarea placedolder="Conteúdo da Publicação" rows="6" maxLength="500" formControlName="Descricao" [(ngModel)]="post.Descricao" required></ion-textarea>
+            </ion-item>
+        </ion-list>
+
+        <div padding>
+            <button ion-button block>Salvar</button>
+        </div>
+    </form>
+</ion-content>

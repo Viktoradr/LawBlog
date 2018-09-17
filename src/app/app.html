@@ -1,0 +1,28 @@
+<ion-menu [content]="content">
+    <ion-header class="bg-color">
+
+        <ion-list no-lines padding-top>
+            <ion-item ion-item>
+                <h2>LawBlog</h2>
+                <p>Victor Alves</p>
+            </ion-item>
+        </ion-list>
+
+    </ion-header>
+
+    <ion-content>
+        <ion-list no-lines padding-left>
+            <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+            <ion-icon item-start [name]="p.icon" [color]="isActive(p)"></ion-icon>
+            {{p.title}}
+          </button>
+            <button menuClose ion-item (click)="logout()">
+              <ion-icon item-start  name="ios-log-out-outline"></ion-icon>
+              Logout
+          </button>
+        </ion-list>
+    </ion-content>
+
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

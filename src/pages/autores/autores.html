@@ -1,0 +1,42 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>Lista de Autores</ion-title>
+
+        <ion-buttons end>
+            <button ion-button icon-only color="secondary">
+                <ion-icon name="md-add-circle"></ion-icon>
+              </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+    <ion-list>
+        <ion-list-header text-left>
+            Autores
+        </ion-list-header>
+        <ion-item>
+            <h2>Nome do Autor</h2>
+            <p>2 Postagens</p>
+            <button ion-button item-end color="secondary" (click)="verPosts()">Editar</button>
+        </ion-item>
+
+        <ion-item>
+            <h2>Nome do Autor</h2>
+            <p>2 Postagens</p>
+            <button ion-button item-end color="secondary" (click)="verPosts()">Editar</button>
+        </ion-item>
+
+        <ion-item>
+            <h2>Nome do Autor</h2>
+            <p>2 Postagens</p>
+            <button ion-button item-end color="secondary" (click)="verPosts()">Editar</button>
+        </ion-item>
+    </ion-list>
+
+</ion-content>

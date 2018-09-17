@@ -1,0 +1,7 @@
+{
+  "name": "LawBlog",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
